@@ -4,8 +4,8 @@ FROM yongjhih/alpine-openjdk
 ENV ANDROID_SDK_ZIP http://dl.google.com/android/android-sdk_r24.3.4-linux.tgz
 
 RUN apk add --no-cache curl ca-certificates bash && \
-    mkdir -p /opt && curl -L $ANDROID_SDK_ZIP | tar zxv -C /opt && \
-    apk add --nocache lib32stdc++6 lib32z1
+    mkdir -p /opt && curl -L $ANDROID_SDK_ZIP | tar zxv -C /opt
+    # apk add --nocache lib32stdc++6 lib32z1
 
 ENV ANDROID_HOME /opt/android-sdk-linux
 
